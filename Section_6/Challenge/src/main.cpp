@@ -1,3 +1,7 @@
+/*gcc main.cpp -o main.out
+*./main.out
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -18,9 +22,9 @@ int main() {
     cout << "Franks Carpet Cleaning Service\nCharges\n$" <<smRoomCost <<"\n$" <<lrgRoomCost 
     <<"\nSales tax rate is " <<salesTax*100 << "%\nEstimates are valid for" << validFor <<" days."<<endl;
 
-    cout << "How many" << smRoom << "rooms would you like cleaned?"<<endl;
+    cout << "How many " << smRoom << " rooms would you like cleaned?"<<endl;
     cin >> noSmRoom;
-    cout << "How many" << lrgRoom << "rooms would you like cleaned?" <<endl;
+    cout << "How many " << lrgRoom << " rooms would you like cleaned?" <<endl;
     cin >> noLrgRoom;
 
     int salesTotal = (smRoomCost * noSmRoom) + (lrgRoomCost * noLrgRoom);
