@@ -23,7 +23,7 @@ int main() {
     std::cout << vector2.at(1) << std::endl;
     std::cout << vector2.size() << std::endl;
 
-    std::vector <std::vector<int>> vector_2d;
+    std::vector <std::vector<int> > vector_2d;
 
     vector_2d.push_back(vector1);
     vector_2d.push_back(vector2);
