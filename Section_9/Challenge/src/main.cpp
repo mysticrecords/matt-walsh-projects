@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string.h>
+#include <vector>
 
 std::string menu() {
 
@@ -12,13 +14,30 @@ std::string menu() {
     
 };
 
-// std::char menuSelect(char choice) {
+std::string printNumbers(std::vector<int> numVector) {
+    std::string numb {""};
+    for (int i: numVector) {
+        numb += std::to_string(i) + " ";
+    }
 
-//     return choice;
-    
-// }
+return numb;
+};
+
+int addNumber() {
+
+    std::cout << "enter an integer" << std::endl;
+    int num {};
+    std::cin >> num;
+
+    return num;
+
+}
+
+
 
 int main() {
+
+    std::vector<int> numVector {1, 2, 3, 4, 5};
 
     char choice {' '};
 
@@ -30,11 +49,11 @@ int main() {
         switch(choice) {
             case 'p':
             case 'P':
-                //printNumbers();
+                std::cout << printNumbers(numVector) << "\n" << std::endl;
                 break;
             case 'a':
             case 'A':
-                //addNumber();
+                numVector.push_back(addNumber());
                 break;
             case 'm':
             case 'M':
@@ -51,6 +70,7 @@ int main() {
             case 'q':
             case 'Q':
                 std::cout <<"Thank you for using the numbers app";
+                choice ='q';
                 break;
             default:
                 std::cout <<"Unknown selection, please try again";
@@ -58,7 +78,7 @@ int main() {
         }
         
 
-    } while(choice != 'q');
+    } while(choice != 'q' && choice != 'Q');
 
     
 
