@@ -61,6 +61,20 @@ int smallNum(std::vector<int> numVector)
     return small;
 }
 
+int lrgNum(std::vector<int> numVector) 
+{
+    int lrg {numVector.at(0)};
+
+    for(int i =0; i < numVector.size(); i++) {
+        for(int j =1; j <numVector.size(); j++) {
+            if(lrg < numVector.at(j)) {
+                lrg = numVector.at(j);
+            }
+        }
+    }
+    return lrg;
+}
+
 int main() {
 
     std::vector<int> numVector {1, 2, 3, 4, 5};
@@ -87,19 +101,19 @@ int main() {
                 break;
             case 's':
             case 'S':
-                std::cout<< "The smallest number is" << smallNum(numVector) << std::endl;
+                std::cout<< "The smallest number is " << smallNum(numVector) << std::endl;
                 break;
             case 'l':
             case 'L':
-                //lrgNum();
+                std::cout<< "The largest number is " << lrgNum(numVector) << std::endl;
                 break;
             case 'q':
             case 'Q':
-                std::cout <<"Thank you for using the numbers app";
+                std::cout <<"Thank you for using the numbers app" <<std::endl;
                 choice ='q';
                 break;
             default:
-                std::cout <<"Unknown selection, please try again";
+                std::cout << "Unknown selection, please try again" << std::endl;
             
         }
         
