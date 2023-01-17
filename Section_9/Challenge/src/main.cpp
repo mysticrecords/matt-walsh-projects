@@ -46,7 +46,20 @@ double meanNum(std::vector<int> numVector)
     return mean;
 }
 
+int smallNum(std::vector<int> numVector)
+{
+    int small {numVector.at(0)};
 
+    for(int i = 0; i < numVector.size(); i++) {
+        for(int j = 1; j < numVector.size(); j++) {
+            if(small > numVector.at(j)) {
+                small = numVector.at(j);
+            }
+        }
+    }
+
+    return small;
+}
 
 int main() {
 
@@ -74,7 +87,7 @@ int main() {
                 break;
             case 's':
             case 'S':
-                //smallNum();
+                std::cout<< "The smallest number is" << smallNum(numVector) << std::endl;
                 break;
             case 'l':
             case 'L':
