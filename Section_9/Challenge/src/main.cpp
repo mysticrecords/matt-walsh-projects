@@ -14,7 +14,8 @@ std::string menu() {
     
 };
 
-std::string printNumbers(std::vector<int> numVector) {
+std::string printNumbers(std::vector<int> numVector) 
+{
     std::string numb {""};
     for (int i: numVector) {
         numb += std::to_string(i) + " ";
@@ -23,14 +24,26 @@ std::string printNumbers(std::vector<int> numVector) {
 return numb;
 };
 
-int addNumber() {
-
+int addNumber() 
+{
     std::cout << "enter an integer" << std::endl;
     int num {};
     std::cin >> num;
 
     return num;
+}
 
+double meanNum(std::vector<int> numVector) 
+{
+    int total {};
+    double mean {};
+    for(auto num : numVector) {
+        total += num;
+    }
+
+    mean = (double) total / numVector.size();
+
+    return mean;
 }
 
 
@@ -57,7 +70,7 @@ int main() {
                 break;
             case 'm':
             case 'M':
-                //meanNum();
+                std::cout << "The mean number is " << meanNum(numVector) << std::endl;
                 break;
             case 's':
             case 'S':
