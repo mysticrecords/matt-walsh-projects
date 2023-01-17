@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string.h>
+#include <vector>
 
 std::string menu() {
 
@@ -12,13 +14,70 @@ std::string menu() {
     
 };
 
-// std::char menuSelect(char choice) {
+std::string printNumbers(std::vector<int> numVector) 
+{
+    std::string numb {""};
+    for (int i: numVector) {
+        numb += std::to_string(i) + " ";
+    }
 
-//     return choice;
-    
-// }
+return numb;
+};
+
+int addNumber() 
+{
+    std::cout << "enter an integer" << std::endl;
+    int num {};
+    std::cin >> num;
+
+    return num;
+}
+
+double meanNum(std::vector<int> numVector) 
+{
+    int total {};
+    double mean {};
+    for(auto num : numVector) {
+        total += num;
+    }
+
+    mean = (double) total / numVector.size();
+
+    return mean;
+}
+
+int smallNum(std::vector<int> numVector)
+{
+    int small {numVector.at(0)};
+
+    for(int i = 0; i < numVector.size(); i++) {
+        for(int j = 1; j < numVector.size(); j++) {
+            if(small > numVector.at(j)) {
+                small = numVector.at(j);
+            }
+        }
+    }
+
+    return small;
+}
+
+int lrgNum(std::vector<int> numVector) 
+{
+    int lrg {numVector.at(0)};
+
+    for(int i =0; i < numVector.size(); i++) {
+        for(int j =1; j <numVector.size(); j++) {
+            if(lrg < numVector.at(j)) {
+                lrg = numVector.at(j);
+            }
+        }
+    }
+    return lrg;
+}
 
 int main() {
+
+    std::vector<int> numVector {1, 2, 3, 4, 5};
 
     char choice {' '};
 
@@ -30,35 +89,36 @@ int main() {
         switch(choice) {
             case 'p':
             case 'P':
-                //printNumbers();
+                std::cout << printNumbers(numVector) << "\n" << std::endl;
                 break;
             case 'a':
             case 'A':
-                //addNumber();
+                numVector.push_back(addNumber());
                 break;
             case 'm':
             case 'M':
-                //meanNum();
+                std::cout << "The mean number is " << meanNum(numVector) << std::endl;
                 break;
             case 's':
             case 'S':
-                //smallNum();
+                std::cout<< "The smallest number is " << smallNum(numVector) << std::endl;
                 break;
             case 'l':
             case 'L':
-                //lrgNum();
+                std::cout<< "The largest number is " << lrgNum(numVector) << std::endl;
                 break;
             case 'q':
             case 'Q':
-                std::cout <<"Thank you for using the numbers app";
+                std::cout <<"Thank you for using the numbers app" <<std::endl;
+                choice ='q';
                 break;
             default:
-                std::cout <<"Unknown selection, please try again";
+                std::cout << "Unknown selection, please try again" << std::endl;
             
         }
         
 
-    } while(choice != 'q');
+    } while(choice != 'q' && choice != 'Q');
 
     
 
