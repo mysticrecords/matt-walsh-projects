@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string.h>
 
+const std::string alphabet {" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!.?"};
+const std::string encoder {" ?MNB0V8CXZAS7DF1GHJKLQWERPO2IUYTqpwoi3ertyugh4fjdksl5azxm6n9cvb"};
+
 std::string encodetMsg(std::string msg) 
 {
-
-    std::string alphabet {" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!.?"};
-    std::string encoder {" ?MNB0V8CXZAS7DF1GHJKLQWERPO2IUYTqpwoi3ertyugh4fjdksl5azxm6n9cvb"};
 
     std::string encodeMsg {};
 
@@ -31,8 +31,6 @@ std::string encodetMsg(std::string msg)
 std::string decodeMsg(std::string msg) 
 {
 
-    std::string alphabet {" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!.?"};
-    std::string encoder {" ?MNB0V8CXZAS7DF1GHJKLQWERPO2IUYTqpwoi3ertyugh4fjdksl5azxm6n9cvb"};
     std::string encodeMsg {};
 
     for(size_t i =0; i < msg.length(); i++) 
@@ -67,7 +65,7 @@ int main()
     std::cin >> choose;
 
     if(choose.compare("y") || choose.compare("Y")) {
-        std::cout << "your secret nessage reads:" << std::endl;
+        std::cout << "your secret message reads:" << std::endl;
         std::cout <<(decodeMsg(encodetMsg(secretMsg))) << std::endl;
     } else if(choose.compare("n") || choose.compare("N")) {
         std::cout << "Well, I guess we'll never know what the message read" << std::endl;
