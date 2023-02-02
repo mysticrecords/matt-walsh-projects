@@ -1,5 +1,7 @@
 #include <iostream>
-#include <string.h>
+#include <string>
+#include <sstream>
+#include <vector>
 
 const std::string alphabet {" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!.?"};
 const std::string encoder {" ?MNB0V8CXZAS7DF1GHJKLQWERPO2IUYTqpwoi3ertyugh4fjdksl5azxm6n9cvb"};
