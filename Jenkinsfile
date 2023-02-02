@@ -20,6 +20,8 @@ agent any
   node {
       stage('Build') {
           echo 'Building....'
+          checkout scm 1
+        /* .. snip .. */
       }
       stage('Test') {
           echo 'Building....'
