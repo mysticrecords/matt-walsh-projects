@@ -20,8 +20,8 @@ agent any
   node {
       stage('Build') {
           echo 'Building....'
-          checkout scm 1
-        /* .. snip .. */
+          sh 'make' 1
+archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
       }
       stage('Test') {
           echo 'Building....'
