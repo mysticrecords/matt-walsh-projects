@@ -1,7 +1,12 @@
 #include <iostream>
 #include <string>
+#include <math.h>
 
 int main() {
+
+    double bill = 122.23;
+
+    std::cout << floor(bill);
 
     std::string input{};
     int point = 0;
