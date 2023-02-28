@@ -10,7 +10,6 @@ agent any
               steps {
                 
                   echo 'Testing..'
-                  sh './Unit_Test_Example/unittests.sh'
               }
           }
           stage('Deploy') {
@@ -26,6 +25,7 @@ agent any
       }
       stage('Test') {
           echo 'Building....'
+           sh './Unit_Test_Example/unittests.sh'
       }
       stage('Deploy') {
           echo 'Deploying....'
