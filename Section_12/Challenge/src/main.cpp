@@ -10,8 +10,8 @@ int *apply_all(int *arr1, int size1, int *arr2, int size2);
 
 int main() {
 
-    int arr1[] {1,2,3,4,5};
-    int arr2[] {10,20,30};
+    int arr1[5] {1,2,3,4,5};
+    int arr2[3] {10,20,30};
 
     int *arr_ptr {arr1};
     int *arr_ptr2 {arr2};
