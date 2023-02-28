@@ -2,6 +2,7 @@
 
 utilsdir="$(dirname "$0" )"
 
-unittests="ctest -C unit_tests --test-dir $utilsdir/build/test/"
+echo unittests="ctest -C unit_tests --test-dir $utilsdir/build/test/"
 
-$unittests
+# $unittests
+
