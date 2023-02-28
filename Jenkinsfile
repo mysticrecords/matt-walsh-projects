@@ -9,7 +9,7 @@ agent any
           stage('Test') {
               steps {
                   echo 'Testing..'
-                  ./Unit_TestExample/unittests.sh
+                  sh './Unit_TestExample/unittests.sh'
               }
           }
           stage('Deploy') {
