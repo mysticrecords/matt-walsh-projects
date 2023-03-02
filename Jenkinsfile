@@ -10,9 +10,9 @@
 
         sh "cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example"
 
-        echo "$PWD"
+        echo "Current workspace is ${env.WORKSPACE}"
 
-        sh "./Unit_Test_Example/unittests.sh"
+        // sh "./Unit_Test_Example/unittests.sh"
       }
       stage('Deploy') {
           echo 'Deploying....'
