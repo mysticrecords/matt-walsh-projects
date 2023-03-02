@@ -28,7 +28,7 @@
         workspace = env.WORKSPACE
         echo "Current workspace is ${env.WORKSPACE}"
 
-        sh 'cd /Unit_Test_Example'
+        sh 'cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example'
         
         sh './unittests.sh'
       }
