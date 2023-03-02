@@ -8,7 +8,10 @@
         workspace = env.WORKSPACE
         echo "Current workspace is ${env.WORKSPACE}"
 
-        sh "cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example"
+        dir("cd /Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
+             workspace = env.WORKSPACE
+        echo "Current workspace is ${env.WORKSPACE}"
+        }
 
         echo "Current workspace is ${env.WORKSPACE}"
 
