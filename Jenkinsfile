@@ -1,53 +1,17 @@
-Declarative //
-  pipeline {
-agent any
-      stages {
-          stage('Build') {
-              steps {
-                echo 'Building..'
-                script {
-                    def directories = getDirectories("$WORKSPACE")
-                    echo "$directories"
-                }
-} }
-          stage('Test') {
-              steps {
-                
-                  echo 'Testing..'
-              }
-          }
-          stage('Deploy') {
-              steps {
-                  echo 'Deploying....'
-} }
-} }
-
-@NonCPS
-def getDirectories(path) {
-    def dir = new File(path)
-    def dirs = []
-    dir.traverse(type: groovy.io.FileType.DIRECTORIES, maxDepth: -1) { d ->
-        dirs.add(d) 
-    }
-    return dirs
-}
-  // Script //
-//   node {
-//       stage('Build') {
-//           echo 'Building....'
-//           sh 'ctest --version'
-
+  node {
+      stage('Build') {
+          echo 'Building....'
           
-//       }
-//       stage('Test') {
+      }
+      stage('Test') {
         
-//         workspace = env.WORKSPACE
-//         echo "Current workspace is ${env.WORKSPACE}"
+        workspace = env.WORKSPACE
+        echo "Current workspace is ${env.WORKSPACE}"
 
-//         sh 'cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example'
+        sh '/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example'
         
-//         sh './unittests.sh'
-//       }
-//       stage('Deploy') {
-//           echo 'Deploying....'
-// } }
+        sh './Unit_Test_Example/unittests.sh'
+      }
+      stage('Deploy') {
+          echo 'Deploying....'
+} }
