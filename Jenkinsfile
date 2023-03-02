@@ -1,38 +1,40 @@
-Declarative //
-  pipeline {
-agent any
-      stages {
-          stage('Build') {
-              steps {
-                  echo 'Building..'
-} }
-          stage('Test') {
-              steps {
+// Declarative //
+//   pipeline {
+// agent any
+//       stages {
+//           stage('Build') {
+//               steps {
+//                   echo 'Building..'
+// } }
+//           stage('Test') {
+//               steps {
                 
-                dir(Unit_Test_Example) {
-            
+//                   echo 'Testing..'
+//               }
+//           }
+//           stage('Deploy') {
+//               steps {
+//                   echo 'Deploying....'
+// } }
+// } }
+  // Script //
+    node {
+      stage('Build') {
+          echo 'Building....'
+          
+      }
+      stage('Test') {
+        
+        workspace = env.WORKSPACE
+        echo "Current workspace is ${env.WORKSPACE}"
+
+        dir(Unit_Test_Example) {
+             sh "ls -la" 
 
         sh "./Unit_Test_Example/unittests.sh"
         }
-              }
-          }
-          stage('Deploy') {
-              steps {
-                  echo 'Deploying....'
-} }
-} }
-//   // Script //
-//     node {
-//       stage('Build') {
-//           echo 'Building....'
-          
-//       }
-//       stage('Test') {
-        
-//         workspace = env.WORKSPACE
-//         echo "Current workspace is ${env.WORKSPACE}"
 
-//       }
-//       stage('Deploy') {
-//           echo 'Deploying....'
-// } }
+      }
+      stage('Deploy') {
+          echo 'Deploying....'
+} }
