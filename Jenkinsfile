@@ -31,7 +31,7 @@
         dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
              sh "ls -la"
 
-        sh "./Unit_Test_Example/unittests.sh"
+        sh "./unittests.sh"
         }
 
       }
