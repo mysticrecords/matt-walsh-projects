@@ -21,6 +21,10 @@
   node {
       stage('Build') {
           echo 'Building....'
+          sh 'cmake -S ./ -B ./build'
+          sh 'cd build/test/'
+          sh 'make'
+
           
       }
       stage('Test') {
