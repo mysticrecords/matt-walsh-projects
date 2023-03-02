@@ -28,9 +28,11 @@
         workspace = env.WORKSPACE
         echo "Current workspace is ${env.WORKSPACE}"
 
-        dir('/Unit_Test_Example')
+        dir('/Unit_Test_Example') {
+            sh './unittests.sh'
+        }
         
-        sh './unittests.sh'
+        
       }
       stage('Deploy') {
           echo 'Deploying....'
