@@ -25,9 +25,9 @@
       }
       stage('Test') {
         echo 'Building....'
-        utilsdir="$( dirname "$0" )"
-
-        echo $utilsdir
+        
+        workspace = env.WORKSPACE
+        echo "Current workspace is ${env.WORKSPACE}"
         
         sh './Unit_Test_Example/unittests.sh'
       }
