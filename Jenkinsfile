@@ -24,8 +24,12 @@
           
       }
       stage('Test') {
-          echo 'Building....'
-           sh './Unit_Test_Example/unittests.sh'
+        echo 'Building....'
+        utilsdir="$( dirname "$0" )"
+
+        echo $utilsdir
+        
+        sh './Unit_Test_Example/unittests.sh'
       }
       stage('Deploy') {
           echo 'Deploying....'
