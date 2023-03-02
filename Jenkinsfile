@@ -24,10 +24,11 @@
           
       }
       stage('Test') {
-        echo 'Building....'
         
         workspace = env.WORKSPACE
         echo "Current workspace is ${env.WORKSPACE}"
+
+        echo "${PWD}"
         
         sh './Unit_Test_Example/unittests.sh'
       }
