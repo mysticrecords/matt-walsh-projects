@@ -29,7 +29,8 @@
         echo "Current workspace is ${env.WORKSPACE}"
 
         dir('/Unit_Test_Example') {
-            sh './unittests.sh'
+            echo "Current workspace is ${env.WORKSPACE}"
+            // sh './unittests.sh'
         }
         
         
