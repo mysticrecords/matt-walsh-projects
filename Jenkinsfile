@@ -4,11 +4,11 @@ agent any
       stages {
           stage('Build') {
               steps {
-                  echo 'Building..'
-                  script {
-            def directories = getDirectories("$WORKSPACE")
-            echo "$directories"
-        }
+                echo 'Building..'
+                script {
+                    def directories = getDirectories("$WORKSPACE")
+                    echo "$directories"
+                }
 } }
           stage('Test') {
               steps {
@@ -21,6 +21,16 @@ agent any
                   echo 'Deploying....'
 } }
 } }
+
+@NonCPS
+def getDirectories(path) {
+    def dir = new File(path)
+    def dirs = []
+    dir.traverse(type: groovy.io.FileType.DIRECTORIES, maxDepth: -1) { d ->
+        dirs.add(d) 
+    }
+    return dirs
+}
   // Script //
 //   node {
 //       stage('Build') {
