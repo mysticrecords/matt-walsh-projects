@@ -28,8 +28,8 @@
         workspace = env.WORKSPACE
         echo "Current workspace is ${env.WORKSPACE}"
 
-        dir(Unit_Test_Example) {
-             sh "ls -la" 
+        dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
+             sh "ls -la"
 
         sh "./Unit_Test_Example/unittests.sh"
         }
