@@ -29,8 +29,10 @@
         echo "Current workspace is ${env.WORKSPACE}"
 
         dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
-            sh "ls -la"
-            sh "./unittests.sh" 
+            sh "cmake --build build"
+        }
+        dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example/build/test/")  {
+            sh "ctest"
         }
 
       }
