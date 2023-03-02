@@ -25,7 +25,7 @@
       }
       stage('Test') {
 
-        ctest arguments: 'test', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example'
+        ctest arguments: 'test', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test/'
         
         // workspace = env.WORKSPACE
         // echo "Current workspace is ${env.WORKSPACE}"
