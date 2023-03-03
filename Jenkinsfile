@@ -35,9 +35,7 @@
       stage('Test') {
 
 
-ctest arguments: 'unittests', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test'
-      cmakeBuild buildDir: 'build', generator: 'Ninja', installation: 'cmake', label: 'build cmake', sourceDir: '/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example'
-
+      ctest arguments: 'unittests', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test'
 
 
         // dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
