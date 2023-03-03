@@ -34,7 +34,7 @@
       }
       stage('Test') {
 
-      cmakeBuild buildDir: 'build', generator: 'Ninja', installation: 'cmake', label: 'build cmake', sourceDir: '/Unit_Test_Example'
+      cmakeBuild buildDir: 'build', generator: 'Ninja', installation: 'cmake', label: 'build cmake', sourceDir: '/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example'
 
         // dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
 
