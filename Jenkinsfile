@@ -33,10 +33,8 @@
           
       }
       stage('Test') {
-
-
-      ctest arguments: 'unittests', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test'
-
+      
+      ctest arguments: 'ctest', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test'
 
         // dir("/Users/mattwalsh/.jenkins/workspace/matt-wash-projects_main/Unit_Test_Example") {
 
