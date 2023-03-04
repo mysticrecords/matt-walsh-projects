@@ -9,7 +9,6 @@ pipeline {
                 */
                 dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
                 sh "make"
-                sh "cmake --version"
                 junit '**/*.xml'
                 
 
