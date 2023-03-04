@@ -1,3 +1,0 @@
-SumAddsTwoInts 1 0.272499
-MultiplyMultipliesTwoInts 1 0.00330227
----
