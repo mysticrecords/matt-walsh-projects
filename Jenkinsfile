@@ -34,7 +34,7 @@
       }
       stage('Test') {
       
-      ctest arguments: 'ctest', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test/'
+      with ctest(ctest arguments: 'ctest', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test/')
 
       }
       stage('Deploy') {
