@@ -8,7 +8,7 @@ pipeline {
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
                 sh "ls -la"
-                // sh "cd /Unit_Test_Example/build/test/"
+                sh "cd /Unit_Test_Example/build/test/"
                 sh 'make' 
                 // junit '**/target/*.xml' 
             }
