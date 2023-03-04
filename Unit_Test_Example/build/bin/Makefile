@@ -127,25 +127,63 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-bin/CMakeFiles/MAIN.dir/rule:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/MAIN.dir/rule
-.PHONY : bin/CMakeFiles/MAIN.dir/rule
+bin/CMakeFiles/sut.dir/rule:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/sut.dir/rule
+.PHONY : bin/CMakeFiles/sut.dir/rule
 
 # Convenience name for target.
-MAIN: bin/CMakeFiles/MAIN.dir/rule
-.PHONY : MAIN
+sut: bin/CMakeFiles/sut.dir/rule
+.PHONY : sut
 
 # fast build rule for target.
-MAIN/fast:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/build
-.PHONY : MAIN/fast
+sut/fast:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/build
+.PHONY : sut/fast
+
+# Convenience name for target.
+bin/CMakeFiles/bootstrap.dir/rule:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/bootstrap.dir/rule
+.PHONY : bin/CMakeFiles/bootstrap.dir/rule
+
+# Convenience name for target.
+bootstrap: bin/CMakeFiles/bootstrap.dir/rule
+.PHONY : bootstrap
+
+# fast build rule for target.
+bootstrap/fast:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/build
+.PHONY : bootstrap/fast
+
+bootstrap.o: bootstrap.cpp.o
+.PHONY : bootstrap.o
+
+# target to build an object file
+bootstrap.cpp.o:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/bootstrap.cpp.o
+.PHONY : bootstrap.cpp.o
+
+bootstrap.i: bootstrap.cpp.i
+.PHONY : bootstrap.i
+
+# target to preprocess a source file
+bootstrap.cpp.i:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/bootstrap.cpp.i
+.PHONY : bootstrap.cpp.i
+
+bootstrap.s: bootstrap.cpp.s
+.PHONY : bootstrap.s
+
+# target to generate assembly for a file
+bootstrap.cpp.s:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/bootstrap.cpp.s
+.PHONY : bootstrap.cpp.s
 
 calc.o: calc.cpp.o
 .PHONY : calc.o
 
 # target to build an object file
 calc.cpp.o:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/calc.cpp.o
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/calc.cpp.o
 .PHONY : calc.cpp.o
 
 calc.i: calc.cpp.i
@@ -153,7 +191,7 @@ calc.i: calc.cpp.i
 
 # target to preprocess a source file
 calc.cpp.i:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/calc.cpp.i
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/calc.cpp.i
 .PHONY : calc.cpp.i
 
 calc.s: calc.cpp.s
@@ -161,32 +199,32 @@ calc.s: calc.cpp.s
 
 # target to generate assembly for a file
 calc.cpp.s:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/calc.cpp.s
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/calc.cpp.s
 .PHONY : calc.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+run.o: run.cpp.o
+.PHONY : run.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/main.cpp.o
-.PHONY : main.cpp.o
+run.cpp.o:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/run.cpp.o
+.PHONY : run.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+run.i: run.cpp.i
+.PHONY : run.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/main.cpp.i
-.PHONY : main.cpp.i
+run.cpp.i:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/run.cpp.i
+.PHONY : run.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+run.s: run.cpp.s
+.PHONY : run.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/main.cpp.s
-.PHONY : main.cpp.s
+run.cpp.s:
+	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/run.cpp.s
+.PHONY : run.cpp.s
 
 # Help Target
 help:
@@ -197,13 +235,17 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... MAIN"
+	@echo "... bootstrap"
+	@echo "... sut"
+	@echo "... bootstrap.o"
+	@echo "... bootstrap.i"
+	@echo "... bootstrap.s"
 	@echo "... calc.o"
 	@echo "... calc.i"
 	@echo "... calc.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... run.o"
+	@echo "... run.i"
+	@echo "... run.s"
 .PHONY : help
 
 

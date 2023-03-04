@@ -1,33 +1,48 @@
-Start testing: Mar 04 00:50 GMT
+Start testing: Mar 04 01:25 GMT
 ----------------------------------------------------------
-1/2 Testing: SumAddsTwoInts
-1/2 Test: SumAddsTwoInts
+1/3 Testing: SumAddsTwoInts
+1/3 Test: SumAddsTwoInts
 Command: "/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/test/unit_tests" "1"
 Directory: /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/test
-"SumAddsTwoInts" start time: Mar 04 00:50 GMT
+"SumAddsTwoInts" start time: Mar 04 01:25 GMT
 Output:
 ----------------------------------------------------------
 <end of output>
-Test time =   0.00 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"SumAddsTwoInts" end time: Mar 04 00:50 GMT
+"SumAddsTwoInts" end time: Mar 04 01:25 GMT
 "SumAddsTwoInts" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/2 Testing: MultiplyMultipliesTwoInts
-2/2 Test: MultiplyMultipliesTwoInts
+2/3 Testing: MultiplyMultipliesTwoInts
+2/3 Test: MultiplyMultipliesTwoInts
 Command: "/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/test/unit_tests" "2"
 Directory: /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/test
-"MultiplyMultipliesTwoInts" start time: Mar 04 00:50 GMT
+"MultiplyMultipliesTwoInts" start time: Mar 04 01:25 GMT
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MultiplyMultipliesTwoInts" end time: Mar 04 00:50 GMT
+"MultiplyMultipliesTwoInts" end time: Mar 04 01:25 GMT
 "MultiplyMultipliesTwoInts" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Mar 04 00:50 GMT
+3/3 Testing: MultiplyNoNegativeNums
+3/3 Test: MultiplyNoNegativeNums
+Command: "/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/test/unit_tests" "3"
+Directory: /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/test
+"MultiplyNoNegativeNums" start time: Mar 04 01:25 GMT
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MultiplyNoNegativeNums" end time: Mar 04 01:25 GMT
+"MultiplyNoNegativeNums" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 04 01:25 GMT

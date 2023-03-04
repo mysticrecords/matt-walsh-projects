@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/test/../src
+CXX_INCLUDES = -I/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/src/.
 
 CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
 

@@ -140,30 +140,6 @@ unit_tests/fast:
 	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
-__/src/calc.o: __/src/calc.cpp.o
-.PHONY : __/src/calc.o
-
-# target to build an object file
-__/src/calc.cpp.o:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/__/src/calc.cpp.o
-.PHONY : __/src/calc.cpp.o
-
-__/src/calc.i: __/src/calc.cpp.i
-.PHONY : __/src/calc.i
-
-# target to preprocess a source file
-__/src/calc.cpp.i:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/__/src/calc.cpp.i
-.PHONY : __/src/calc.cpp.i
-
-__/src/calc.s: __/src/calc.cpp.s
-.PHONY : __/src/calc.s
-
-# target to generate assembly for a file
-__/src/calc.cpp.s:
-	cd /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/__/src/calc.cpp.s
-.PHONY : __/src/calc.cpp.s
-
 calc_test.o: calc_test.cpp.o
 .PHONY : calc_test.o
 
@@ -222,9 +198,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... unit_tests"
-	@echo "... __/src/calc.o"
-	@echo "... __/src/calc.i"
-	@echo "... __/src/calc.s"
 	@echo "... calc_test.o"
 	@echo "... calc_test.i"
 	@echo "... calc_test.s"

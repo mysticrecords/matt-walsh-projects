@@ -51,6 +51,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "bin/CMakeFiles/MAIN.dir/DependInfo.cmake"
+  "bin/CMakeFiles/sut.dir/DependInfo.cmake"
+  "bin/CMakeFiles/bootstrap.dir/DependInfo.cmake"
   "test/CMakeFiles/unit_tests.dir/DependInfo.cmake"
   )

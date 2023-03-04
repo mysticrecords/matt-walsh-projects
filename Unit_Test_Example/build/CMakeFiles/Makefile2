@@ -81,7 +81,8 @@ clean: test/clean
 # Directory level rules for directory bin
 
 # Recursive "all" directory target.
-bin/all: bin/CMakeFiles/MAIN.dir/all
+bin/all: bin/CMakeFiles/sut.dir/all
+bin/all: bin/CMakeFiles/bootstrap.dir/all
 .PHONY : bin/all
 
 # Recursive "preinstall" directory target.
@@ -89,7 +90,8 @@ bin/preinstall:
 .PHONY : bin/preinstall
 
 # Recursive "clean" directory target.
-bin/clean: bin/CMakeFiles/MAIN.dir/clean
+bin/clean: bin/CMakeFiles/sut.dir/clean
+bin/clean: bin/CMakeFiles/bootstrap.dir/clean
 .PHONY : bin/clean
 
 #=============================================================================
@@ -108,44 +110,70 @@ test/clean: test/CMakeFiles/unit_tests.dir/clean
 .PHONY : test/clean
 
 #=============================================================================
-# Target rules for target bin/CMakeFiles/MAIN.dir
+# Target rules for target bin/CMakeFiles/sut.dir
 
 # All Build rule for target.
-bin/CMakeFiles/MAIN.dir/all:
-	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/depend
-	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles --progress-num=1,2,3 "Built target MAIN"
-.PHONY : bin/CMakeFiles/MAIN.dir/all
+bin/CMakeFiles/sut.dir/all:
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/depend
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles --progress-num=3,4,5 "Built target sut"
+.PHONY : bin/CMakeFiles/sut.dir/all
 
 # Build rule for subdir invocation for target.
-bin/CMakeFiles/MAIN.dir/rule: cmake_check_build_system
+bin/CMakeFiles/sut.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/MAIN.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/sut.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 0
-.PHONY : bin/CMakeFiles/MAIN.dir/rule
+.PHONY : bin/CMakeFiles/sut.dir/rule
 
 # Convenience name for target.
-MAIN: bin/CMakeFiles/MAIN.dir/rule
-.PHONY : MAIN
+sut: bin/CMakeFiles/sut.dir/rule
+.PHONY : sut
 
 # clean rule for target.
-bin/CMakeFiles/MAIN.dir/clean:
-	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/clean
-.PHONY : bin/CMakeFiles/MAIN.dir/clean
+bin/CMakeFiles/sut.dir/clean:
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/clean
+.PHONY : bin/CMakeFiles/sut.dir/clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/bootstrap.dir
+
+# All Build rule for target.
+bin/CMakeFiles/bootstrap.dir/all: bin/CMakeFiles/sut.dir/all
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/depend
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles --progress-num=1,2 "Built target bootstrap"
+.PHONY : bin/CMakeFiles/bootstrap.dir/all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/bootstrap.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/bootstrap.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/bootstrap.dir/rule
+
+# Convenience name for target.
+bootstrap: bin/CMakeFiles/bootstrap.dir/rule
+.PHONY : bootstrap
+
+# clean rule for target.
+bin/CMakeFiles/bootstrap.dir/clean:
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/clean
+.PHONY : bin/CMakeFiles/bootstrap.dir/clean
 
 #=============================================================================
 # Target rules for target test/CMakeFiles/unit_tests.dir
 
 # All Build rule for target.
-test/CMakeFiles/unit_tests.dir/all:
+test/CMakeFiles/unit_tests.dir/all: bin/CMakeFiles/sut.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles --progress-num=4,5,6,7 "Built target unit_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles --progress-num=6,7,8 "Built target unit_tests"
 .PHONY : test/CMakeFiles/unit_tests.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/unit_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/unit_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mattwalsh/Documents/Projects/matt-walsh-projects/Unit_Test_Example/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/unit_tests.dir/rule

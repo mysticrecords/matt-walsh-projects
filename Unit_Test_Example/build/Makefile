@@ -127,17 +127,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MAIN
+# Target rules for targets named sut
 
 # Build rule for target.
-MAIN: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MAIN
-.PHONY : MAIN
+sut: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sut
+.PHONY : sut
 
 # fast build rule for target.
-MAIN/fast:
-	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/MAIN.dir/build.make bin/CMakeFiles/MAIN.dir/build
-.PHONY : MAIN/fast
+sut/fast:
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/sut.dir/build.make bin/CMakeFiles/sut.dir/build
+.PHONY : sut/fast
+
+#=============================================================================
+# Target rules for targets named bootstrap
+
+# Build rule for target.
+bootstrap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bootstrap
+.PHONY : bootstrap
+
+# fast build rule for target.
+bootstrap/fast:
+	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/bootstrap.dir/build.make bin/CMakeFiles/bootstrap.dir/build
+.PHONY : bootstrap/fast
 
 #=============================================================================
 # Target rules for targets named unit_tests
@@ -161,7 +174,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... MAIN"
+	@echo "... bootstrap"
+	@echo "... sut"
 	@echo "... unit_tests"
 .PHONY : help
 
