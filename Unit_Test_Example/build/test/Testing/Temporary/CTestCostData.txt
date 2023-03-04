@@ -1,0 +1,4 @@
+SumAddsTwoInts 43 7.84639e-05
+MultiplyMultipliesTwoInts 38 0.000109715
+MultiplyNoNegativeNums 5 0.00140204
+---

@@ -7,8 +7,8 @@ pipeline {
                 /* `make check` returns non-zero on test failures,
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
-                sh "cd /Unit_Test_Example/build/test/"
                 sh "ls -la"
+                // sh "cd /Unit_Test_Example/build/test/"
                 sh 'make' 
                 // junit '**/target/*.xml' 
             }

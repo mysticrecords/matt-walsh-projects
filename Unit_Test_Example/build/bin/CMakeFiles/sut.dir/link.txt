@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libsut.a CMakeFiles/sut.dir/calc.cpp.o CMakeFiles/sut.dir/run.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libsut.a
