@@ -4,14 +4,13 @@ pipeline {
     stages {
       environment { 
         CC = 'clang'
-        
-  cmakeBuild(
+        cmakeBuild(
     buildDir: 'build/debug',
     buildType: 'Debug',
     generator: 'Ninja',
     installation: 'InSearchPath',
   )
-}
+        
     }
         stage('Test') {
             steps {
