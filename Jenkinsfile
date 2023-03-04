@@ -7,8 +7,8 @@ pipeline {
                 /* `make check` returns non-zero on test failures,
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
-                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
-                sh "ctest"
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/"){
+                sh "ninja"
                 junit '**/*.xml'
                 
 
