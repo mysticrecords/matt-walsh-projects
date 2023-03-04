@@ -7,8 +7,10 @@ pipeline {
                 /* `make check` returns non-zero on test failures,
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
-                sh 'cmake --version' 
-                junit '**/target/*.xml' 
+                sh "cd /Unit_Test_Example/build/test/"
+                sh "ls -la"
+                sh 'make' 
+                // junit '**/target/*.xml' 
             }
         }
     }
