@@ -1,42 +1,15 @@
-// Declarative //
-//   pipeline {
-// agent any
-//       stages {
-//         stage('run CMake')
-// {
-//      def cmakePath = tool 'CMake'
-//      bat """
-//      mkdir build
-//      cd build
-//      ${cmakePath}\\cmake -DBOOST_ROOT=...
-//      """
-// }
-//           stage('Build') {
-//               steps {
-//                   echo 'Building..'
-// } }
-//           stage('Test') {
-//               steps {
-                
-//                   echo 'Testing..'
-//               }
-//           }
-//           stage('Deploy') {
-//               steps {
-//                   echo 'Deploying....'
-// } }
-// } }
-  // Script //
-    node {
-      stage('Build') {
-          echo 'Building....'
+node {
+  stage('Build') {
+    withEnv(["WORKSPACE=${pwd()}"]) { //Setting Workspace to the current directory
+        stage('Clone repository...') {
+            checkout scm //Let checkout automagically handle pulling in all the names we need and whatnot
           
-      }
-      stage('Test') {
+  }
+  stage('Test') {
       
-      with ctest(ctest arguments: 'ctest', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test/')
+  ctest arguments: 'ctest', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test/'
 
-      }
-      stage('Deploy') {
-          echo 'Deploying....'
+  }
+  stage('Deploy') {
+    echo 'Deploying....'
 } }
