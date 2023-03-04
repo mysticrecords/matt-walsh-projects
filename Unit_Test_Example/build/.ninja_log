@@ -1,9 +1,9 @@
 # ninja log v5
 6	116	1677925601575235961	bin/CMakeFiles/bootstrap.dir/bootstrap.cpp.o	ecb08a8593fd75b8
-2	129	1677925601587910428	bin/CMakeFiles/sut.dir/calc.cpp.o	64a7aa045a8a765d
 10	224	1677925601684031523	test/CMakeFiles/unit_tests.dir/calc_test.cpp.o	d4304f18eba72fe7
 8	715	1677925602172975586	test/CMakeFiles/unit_tests.dir/unit_tests.cpp.o	470a6e6fc22f0a87
-4	935	1677925602392133360	bin/CMakeFiles/sut.dir/run.cpp.o	b38c1c177faa0707
 935	988	1677925602450862000	bin/libsut.a	7015c284ff953b1f
+2	129	1677925601587910428	bin/CMakeFiles/sut.dir/calc.cpp.o	64a7aa045a8a765d
 988	1067	1677925602527703581	bin/bootstrap	d1bd32b30f80008b
 989	1068	1677925602529047609	test/unit_tests	ea11b8797b033db9
+4	935	1677925602392133360	bin/CMakeFiles/sut.dir/run.cpp.o	b38c1c177faa0707

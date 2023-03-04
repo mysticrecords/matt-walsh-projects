@@ -8,7 +8,7 @@ pipeline {
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
                 dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
-                sh "make"
+                sh "ctest"
                 junit '**/*.xml'
                 
 
