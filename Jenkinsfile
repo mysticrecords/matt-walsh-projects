@@ -4,11 +4,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                /* `make check` returns non-zero on test failures,
-                * using `true` to allow the Pipeline to continue nonetheless
-                */
-                dir("${env.WORKSPACE}//Unit_Test_Example/build/"){
-                sh "ninja"
+                tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
+
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+                sh "ctest"
                 junit '**/*.xml'
                 
 
