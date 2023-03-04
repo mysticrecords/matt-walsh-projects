@@ -2,6 +2,17 @@ pipeline {
     agent any
 
     stages {
+      environment { 
+        CC = 'clang'
+        
+  cmakeBuild(
+    buildDir: 'build/debug',
+    buildType: 'Debug',
+    generator: 'Ninja',
+    installation: 'InSearchPath',
+  )
+}
+    }
         stage('Test') {
             steps {
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
