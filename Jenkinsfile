@@ -7,7 +7,7 @@ pipeline {
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
 
                 dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
-                sh "ctest"
+                ctest
                 junit '**/*.xml'
                 
 
