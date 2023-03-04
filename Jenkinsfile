@@ -12,9 +12,7 @@ node {
         ctest arguments: 'ctest', installation: 'cmake', label: 'cmake'
      }
       
-  
-
-  }
+  } }
   stage('Deploy') {
     echo 'Deploying....'
 } }
