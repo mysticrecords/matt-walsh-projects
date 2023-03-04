@@ -2,8 +2,9 @@ node {
   stage('Build') {
     withEnv(["WORKSPACE=${pwd()}"]) { //Setting Workspace to the current directory
         stage('Clone repository...') {
-            checkout scm //Let checkout automagically handle pulling in all the names we need and whatnot
-          
+            checkout scm //Let checkout automagically handle pulling in all the names we need and whatnot  
+      }
+    }
   }
   stage('Test') {
       
