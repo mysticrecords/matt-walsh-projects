@@ -7,8 +7,12 @@ node {
     }
   }
   stage('Test') {
+    withEnv(["WORKSPACE=${pwd()}/Unit_Test_Example/build/test/"]) { //Setting Workspace to the current directory
+      stage('Run Unit Tests') {
+        ctest arguments: 'ctest', installation: 'cmake', label: 'cmake'
+     }
       
-  ctest arguments: 'ctest', installation: 'cmake', label: 'cmake', workingDir: '/Unit_Test_Example/build/test/'
+  
 
   }
   stage('Deploy') {
