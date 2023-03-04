@@ -1,23 +1,13 @@
 pipeline {
     agent any
-    environment { 
-        CC = 'clang'
-        cmakeBuild(
-    buildDir: 'build/debug',
-    buildType: 'Debug',
-    generator: 'Ninja',
-    installation: 'InSearchPath',
-  )
-        
-    }
 
     stages {
         stage('Test') {
             steps {
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
 
-                dir("${env.WORKSPACE}//Unit_Test_Example/build/"){
-                sh "build.ninja"
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+                
                 junit '**/*.xml'
                 
 
