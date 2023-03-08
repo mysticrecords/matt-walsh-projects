@@ -2,7 +2,31 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('Unit Tests') {
+
+            steps {
+          
+                tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
+
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+                
+                junit '**/*.xml'
+                }
+            }
+        }
+        stage('Functional Tests') {
+            
+            steps {
+          
+                tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
+
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+                
+                junit '**/*.xml'
+                }
+            }
+        }
+        stage('Automated Tests') {
             
             steps {
           
