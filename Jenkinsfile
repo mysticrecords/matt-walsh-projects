@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                when { anyOf { branch 'main'; branch 'jwalshm2' } }
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
 
                 dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
