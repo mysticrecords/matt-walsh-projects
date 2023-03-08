@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     stages {
+      when { anyOf { branch 'main'; branch 'jwalshm2' } }
         stage('Test') {
-          when { anyOf { branch 'main'; branch 'jwalshm2' } }
+          
             steps {
           
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
