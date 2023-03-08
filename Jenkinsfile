@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Test') {
-          when { anyOf { branch 'main'; branch 'jwalshm2' } }
+          when { anyOf { branch 'main'; branch 'jwalshm2'; branch 'test_branch' } }
             steps {
 
                 // tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
