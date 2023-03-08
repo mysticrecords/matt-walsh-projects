@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-      when { anyOf { branch 'main'; branch 'jwalshm2' } }
+      when { anyOf { branch 'main'; branch 'jwalshm2'; branch 'test_branch' } }
         stage('Test') {
           
             steps {
