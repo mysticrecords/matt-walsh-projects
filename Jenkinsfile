@@ -17,7 +17,7 @@ pipeline {
         stage('Functional Tests') {
             
             steps {
-          
+
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
 
                 dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
