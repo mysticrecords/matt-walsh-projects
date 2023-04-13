@@ -58,14 +58,18 @@ int main() {
     test2 += someone;
     
 
-     std::cout << test << std::endl;
-     std::cout << test2 << std::endl;
+    std::cout << test << std::endl;
+    std::cout << test2 << std::endl;
 
-     std::cout << test2 * 3 << std::endl;
+    std::cout << test2 * 3 << std::endl;
 
-     MyString another{"12345"};
+    MyString another{"12345"};
 
-     std::cout << test2 *= 2;
+    std::cout << "-----------------------------" << std::endl;
+
+    another *= 4;
+
+    std::cout << another;
 
     
 

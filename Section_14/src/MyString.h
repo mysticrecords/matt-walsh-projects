@@ -20,7 +20,7 @@ class MyString {
     friend MyString operator+=(const MyString &lhs, const MyString &rhs);
 
     friend MyString operator*(const MyString &obj, int times);
-    friend MyString &operator*=(const MyString &obj, int times);
+    friend MyString &operator*=(MyString &obj, int times);
 
     private:
         char *str;

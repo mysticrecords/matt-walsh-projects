@@ -30,7 +30,16 @@
 *.exe
 *.out
 *.app
-.mk
+*.mk
 
 #Directories
-/build
+build
+
+#Others
+*.project
+*.session
+*.tags
+*.workspace
+
+#Databases
+*.db
