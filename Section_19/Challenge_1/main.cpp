@@ -6,11 +6,11 @@
 #include <vector>
 #include <string>
 
-const int totalWidth(60);
-const int col1Width(15);
-const int col2Width(15);
-const int col3Width(15);
-const int col4Width(15);
+const int totalWidth{75};
+const int col1Width{20};
+const int col2Width{25};
+const int col3Width{15};
+const int col4Width{15};
 
 struct City {
     std::string name;
@@ -50,10 +50,10 @@ void tableDivides(int width, char fill) {
 }
 
 void cityDetails(std::string country, std::string city, long population, std::string currency, double cost) {
-    std::cout << std::setw(15) <<std::left << country 
-    << std::setw(15) << city 
-    << std::setw(15) << std::setprecision(2) << std::fixed << populationDecimal(population)
-    << currency << std::setw(15) << std::left << std::fixed << std::setprecision(2) << cost << std::endl;
+    std::cout << std::setw(col1Width) <<std::left << country 
+    << std::setw(col2Width) << city 
+    << std::setw(col3Width) << std::setprecision(2) << std::fixed << populationDecimal(population)
+    << currency << std::setw(col4Width) << std::left << std::fixed << std::setprecision(2) << cost << std::endl;
 }
 
 void printTable(struct Tours tours, std::string country, std::string city, std::string population, std::string cost) {
@@ -68,7 +68,7 @@ void printTable(struct Tours tours, std::string country, std::string city, std::
             : cityDetails(" ", country.cities.at(i).name, country.cities.at(i).population, "$", country.cities.at(i).cost);   
         }
     }
-    tableDivides(60, '-');
+    tableDivides(totalWidth, '-');
 }
 
 int main()
