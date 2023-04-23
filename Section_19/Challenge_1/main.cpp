@@ -6,6 +6,12 @@
 #include <vector>
 #include <string>
 
+const int totalWidth(60);
+const int col1Width(15);
+const int col2Width(15);
+const int col3Width(15);
+const int col4Width(15);
+
 struct City {
     std::string name;
     long population;
@@ -32,10 +38,10 @@ void tableTitle(std::string title) {
 }
 
 void tableHeader(std::string col1, std::string col2, std::string col3, std::string col4) {
-    std::cout << std::setw(15) << std::left << col1 
-    << std::setw(15) << col2 
-    << std::setw(15) << col3 
-    << std::setw(15) << col4 << std::endl;
+    std::cout << std::setw(col1Width) << std::left << col1 
+    << std::setw(col2Width) << col2 
+    << std::setw(col3Width) << col3 
+    << std::setw(col4Width) << col4 << std::endl;
 }
 
 void tableDivides(int width, char fill) {
@@ -51,14 +57,15 @@ void cityDetails(std::string country, std::string city, long population, std::st
 }
 
 void printTable(struct Tours tours, std::string country, std::string city, std::string population, std::string cost) {
-    tableDivides(60, '-');
+    tableDivides(totalWidth, '-');
     tableTitle(tours.title);
-    tableDivides(60, '-');
+    tableDivides(totalWidth, '-');
     tableHeader(country, city, population, cost);
     for(auto country : tours.countries) {
-        tableDivides(60, '-');
-        for(auto city : country.cities) {
-            cityDetails(country.name, city.name, city.population, "$", city.cost);
+        tableDivides(totalWidth, '-');
+        for(int i =0; i < country.cities.size(); ++i) {
+            i == 0 ? cityDetails(country.name, country.cities.at(i).name, country.cities.at(i).population, "$", country.cities.at(i).cost) 
+            : cityDetails(" ", country.cities.at(i).name, country.cities.at(i).population, "$", country.cities.at(i).cost);   
         }
     }
     tableDivides(60, '-');
