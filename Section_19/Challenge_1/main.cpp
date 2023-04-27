@@ -34,7 +34,8 @@ double populationDecimal(int population) {
 }
 
 void tableTitle(std::string title) {
-    std::cout << title << std::endl;
+    
+    std::cout << std::setw((totalWidth - title.length())/2) << "" << title << std::endl;
 }
 
 void tableHeader(std::string col1, std::string col2, std::string col3, std::string col4) {
