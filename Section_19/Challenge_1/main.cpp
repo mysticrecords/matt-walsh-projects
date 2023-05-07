@@ -30,7 +30,7 @@ struct Tours {
 };
 
 double populationDecimal(int population) {
-    return (double) population / (double) 1'000'000;
+    return (double) population / (double) 1000000;
 }
 
 void tableTitle(std::string title) {
