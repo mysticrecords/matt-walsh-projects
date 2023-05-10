@@ -33,6 +33,8 @@ pipeline {
                 tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
 
                 dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+
+                    enter a mistake to show failing test report in GitHub
                 
                 junit '**/*.xml'
                 }
@@ -40,8 +42,6 @@ pipeline {
         }
     }
 }
-
-
 
 
 
