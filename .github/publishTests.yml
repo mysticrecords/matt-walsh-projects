@@ -1,4 +1,4 @@
-name: Cppcheck
+name: unit tests
 
  on: 
    push:
@@ -7,7 +7,7 @@ name: Cppcheck
 
  jobs:
    build:
-     name: cppcheck-job
+     name: test
      runs-on: runner
      steps:
        - name: checkout
