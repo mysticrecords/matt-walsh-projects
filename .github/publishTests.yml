@@ -12,15 +12,12 @@ name: unit tests
      steps:
        - name: checkout
          uses: actions/checkout@v3.5.3
+
+     - name: current directory
+       run: pwd
          
-     - name: Publish Test Results
-       uses: EnricoMi/publish-unit-test-result-action@v2.8.0
-       
-       - name: Publish Test Results
-         uses: EnricoMi/publish-unit-test-result-action/composite@v2
-          if: always()
-          with:
-           files: |
-            test-results/**/*.xml
-            test-results/**/*.trx
-            test-results/**/*.json
+     - name: Install cmake
+       run: |
+         sudo brew install cmake 
+         cmake
+      
