@@ -1,3 +1,50 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Unit Tests') {
+
+            steps {
+          
+                tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
+
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+                
+                junit '**/*.xml'
+                }
+            }
+        }
+        stage('Functional Tests') {
+            
+            steps {
+
+                tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
+
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+                
+                junit '**/*.xml'
+                }
+            }
+        }
+        stage('Automated Tests') {
+            
+            steps {
+          
+                tool name: 'cmake', type: 'hudson.plugins.cmake.CmakeTool'
+
+                dir("${env.WORKSPACE}//Unit_Test_Example/build/test/"){
+
+                    enter a mistake to show failing test report in GitHub
+                
+                junit '**/*.xml'
+                }
+            }
+        }
+    }
+}
+
+
+
 // pipeline {
 //     agent any
 
