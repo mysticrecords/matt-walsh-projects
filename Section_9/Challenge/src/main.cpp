@@ -24,6 +24,16 @@ std::string printNumbers(std::vector<int> numVector)
 return numb;
 };
 
+std::string printNumbers2(std::vector<int> numVector) 
+{
+    std::string numb {""};
+    for (int i: numVector) {
+        numb += std::to_string(i) + " ";
+    }
+
+return numb;
+};
+
 int addNumber() 
 {
     std::cout << "enter an integer" << std::endl;
